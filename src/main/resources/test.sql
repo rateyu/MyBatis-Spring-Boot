@@ -224,3 +224,27 @@ INSERT INTO `country` VALUES (183,'Zambia','ZM');
 -- 城市信息
 INSERT INTO `city` VALUES ('1', '石家庄', '河北');
 INSERT INTO `city` VALUES ('2', '邯郸', '河北');
+
+
+
+CREATE TABLE myu_test(
+  id int NOT NULL AUTO_INCREMENT,
+  ip VARCHAR(100) ,
+  name VARCHAR(100),
+  isuse INT DEFAULT 0,
+  PRIMARY KEY (id)
+);
+use test;
+SELECT *
+FROM myu_test;
+
+UPDATE myu_test set name ='test2' where id =2;
+UPDATE myu_test set name ='test3' where id =3;
+
+
+INSERT into myu_test(ip,name,isuse)
+    VALUES ('127.0.0.1','test',1);
+INSERT into myu_test(ip,name,isuse)
+VALUES ('127.0.0.2','test',1);
+INSERT into myu_test(ip,name,isuse)
+VALUES ('127.0.0.3','test',1);
